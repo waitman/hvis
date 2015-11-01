@@ -134,17 +134,17 @@ MainWindow::MainWindow(QWidget *parent) :
 	}
 	save_path = QDir("save").absolutePath();
 
-    QWidget *widget = new QWidget;
-    widget->setLayout(layout);
-    setCentralWidget(widget);
-    index=0;
-    vw = view->width();
-    vh = view->height();
-    
-    connect(scene,SIGNAL(swipeRight()),SLOT(advanceScene()));
-    connect(scene,SIGNAL(swipeLeft()),SLOT(retractScene()));
-    
-    displayScene();
+	QWidget *widget = new QWidget;
+	widget->setLayout(layout);
+	setCentralWidget(widget);
+	index=0;
+	vw = view->width();
+	vh = view->height();
+
+	connect(scene,SIGNAL(swipeRight()),SLOT(advanceScene()));
+	connect(scene,SIGNAL(swipeLeft()),SLOT(retractScene()));
+
+	displayScene();
 
 }
 
@@ -213,22 +213,22 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
 }
 void MainWindow::displayScene(void)
 {
-	    QFileInfo f = image_list[index];
-		scene->displayImage(f.absoluteFilePath(), vh, vw);
+	QFileInfo f = image_list[index];
+	scene->displayImage(f.absoluteFilePath(), vh, vw);
 }
 void MainWindow::advanceScene(void)
 {
-		index++;
-		if (index>=image_list.count()) index=0;
-	    QFileInfo f = image_list[index];
-		scene->displayImage(f.absoluteFilePath(), vh, vw);
+	index++;
+	if (index>=image_list.count()) index=0;
+	QFileInfo f = image_list[index];
+	scene->displayImage(f.absoluteFilePath(), vh, vw);
 }
 void MainWindow::retractScene(void)
 {
-		index--;
-		if (index<0) index=image_list.count()-1;
-	    QFileInfo f = image_list[index];
-		scene->displayImage(f.absoluteFilePath(), vh, vw);
+	index--;
+	if (index<0) index=image_list.count()-1;
+	QFileInfo f = image_list[index];
+	scene->displayImage(f.absoluteFilePath(), vh, vw);
 
 }
 MainWindow::~MainWindow()
