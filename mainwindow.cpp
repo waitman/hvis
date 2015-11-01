@@ -59,8 +59,8 @@ MainWindow::MainWindow(QWidget *parent) :
 	bool can_write=fi.permission(QFile::WriteUser);
 	if (!can_write)
 	{
-			qDebug() << "Error: Write Access Denied in current Directory.";
-			exit(1);
+		qDebug() << "Error: Write Access Denied in current Directory.";
+		exit(1);
 	}
 	
 	QByteArray value;
