@@ -1,8 +1,8 @@
 
 1) Introduction 
 
-This program is intended as a means for for quick field review of 
-camera images. It was developed using Qt5. May work with Qt4 but not 
+This program is intended as a means for quick field review of camera 
+images. It was developed using Qt5. May work with Qt4 but not 
 tested.
 
 hvis displays JPEG images located in the current directory, 
