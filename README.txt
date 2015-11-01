@@ -33,7 +33,7 @@ example: specify alternate location for ImageMagick "convert"
 
 X		quit the program
 Q		quit the program
-SPACE	advance to the next frame
+SPACE		advance to the next frame
 B		retract to the previous frame
 +		advance 10 frames
 -		retract 10 frames
