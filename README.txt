@@ -20,8 +20,8 @@ ImageMagick software installed.
 
 CONVERT 		default "/usr/bin/convert"
 THUMBSIZE		default "1000x1000"
-THUMBQUALITY 	default "90"
-THUMBDENSITY	default "120"
+THUMBQUALITY 		default "90"
+THUMBDENSITY		default "120"
 
 example: specify alternate location for ImageMagick "convert"
 
