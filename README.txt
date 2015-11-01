@@ -25,8 +25,8 @@ THUMBDENSITY	default "120"
 
 example: specify alternate location for ImageMagick "convert"
 
-#setenv CONVERT /usr/local/bin/convert
-#export CONVERT=/usr/local/bin/convert
+# setenv CONVERT /usr/local/bin/convert
+# export CONVERT=/usr/local/bin/convert
 
 
 3) Key Commands
