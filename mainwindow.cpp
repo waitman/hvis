@@ -181,10 +181,12 @@ void MainWindow::keyPressEvent(QKeyEvent* event)
 		QString thumdest(save_path + "/th/" + f.fileName());
 		QFile::copy(f.absoluteFilePath(), dest);
 		QProcess opp;
+		opp.deleteLater();
 		opp.startDetached(def_convert, QStringList() << "-scale" << 
 			def_thumbsize << "-size" << def_thumbsize << "-strip" << 
 			"-quality" << def_thumbquality << "-density" << 
 			def_thumbdensity << dest << thumdest);
+		
 	}
 	if (key=="r") 
 	{
